@@ -63,7 +63,7 @@ colcon build
 source install/setup.bash
 ```
 
-หลังจากแก้ไฟล์ launch หรือ script แล้วให้ build ใหม่และ source ใหม่:
+ถ้าหากแก้ไฟล์อะไร หลังจากแก้ไฟล์ launch หรือ script แล้วให้ build ใหม่และ source ใหม่:
 
 ```bash
 colcon build
