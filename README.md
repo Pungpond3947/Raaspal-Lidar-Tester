@@ -44,14 +44,7 @@ rosdep update
 ## Clone workspace
 
 ```bash
-git clone <repository-url> Raaspal_Lidar_test
-cd Raaspal_Lidar_test
-```
-
-ถ้า repo มี submodule ให้ clone แบบนี้แทน:
-
-```bash
-git clone --recursive <repository-url> Raaspal_Lidar_test
+git clone [<repository-url>](https://github.com/Pungpond3947/Raaspal-Lidar-Tester.git) Raaspal_Lidar_test
 cd Raaspal_Lidar_test
 ```
 
