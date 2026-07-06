@@ -45,8 +45,6 @@ ls /dev/ttyUSB*
 ค่า default ใน launch ตอนนี้คือ:
 
 - `serial_port:=/dev/ttyUSB0`
-- `serial_baudrate:=256000`
-- `frame_id:=laser`
 
 ถ้าเครื่องเห็นเป็น `/dev/ttyUSB1` หรือ port อื่น ต้อง override ตอน launch หรือแก้ค่าในไฟล์ launch ให้ตรงกัน
 
@@ -110,6 +108,22 @@ ros2 launch lidar_tester lidar_tester_a2m7_launch.py
 
 ```bash
 ros2 launch lidar_tester lidar_tester_a2m7_launch.py serial_port:=/dev/ttyUSB1
+```
+
+## Launch สำหรับ PACECAT LDS-50C-C20E
+
+คำสั่งนี้จะรัน bluesea2, angle filter, RViz และ lidar tester ใน launch เดียว
+
+```bash
+source /opt/ros/humble/setup.bash
+source install/setup.bash
+ros2 launch bluesea2 view_uart_lidar.launch.py 
+```
+
+ถ้าต้องการเปลี่ยน port:
+
+```bash
+ros2 launch bluesea2 view_uart_lidar.launch.py serial_port:=/dev/ttyUSB1
 ```
 
 ## Topic ที่ใช้
