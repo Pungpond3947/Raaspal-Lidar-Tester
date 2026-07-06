@@ -19,8 +19,8 @@ def generate_launch_description():
     inverted = LaunchConfiguration('inverted', default='false')
     angle_compensate = LaunchConfiguration('angle_compensate', default='true')
     scan_mode = LaunchConfiguration('scan_mode', default='Standard')
-    lower_angle = LaunchConfiguration('lower_angle', default='2.443') # pi - rad_wanted
-    upper_angle = LaunchConfiguration('upper_angle', default='-2.443') # -pi + rad_wanted
+    lower_angle = LaunchConfiguration('lower_angle', default='-3.14') # pi - rad_wanted
+    upper_angle = LaunchConfiguration('upper_angle', default='3.14') # -pi + rad_wanted
 	
     rviz_config_dir = os.path.join(
             get_package_share_directory('rplidar_ros'),
@@ -102,7 +102,7 @@ def generate_launch_description():
                         'angle_min': ParameterValue(lower_angle, value_type=float),
                         'angle_max': ParameterValue(upper_angle, value_type=float),
                         'range_min': 0.0,
-                        'range_max': 0.75,
+                        'range_max': 2.0,
                         'clear_inside': False,
                         'invert': False,
                     },

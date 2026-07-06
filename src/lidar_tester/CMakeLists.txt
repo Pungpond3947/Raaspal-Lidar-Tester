@@ -30,6 +30,7 @@ install(PROGRAMS
   scripts/dummy_script.py
   scripts/lidar_s1_range_tester.py
   scripts/lidar_a2m7_range_tester.py
+  scripts/pudu_lidar_node.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

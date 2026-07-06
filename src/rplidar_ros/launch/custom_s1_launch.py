@@ -15,11 +15,11 @@ def generate_launch_description():
     channel_type =  LaunchConfiguration('channel_type', default='serial')
     serial_port = LaunchConfiguration('serial_port', default='/dev/ttyUSB0')
     serial_baudrate = LaunchConfiguration('serial_baudrate', default='256000') 
-    frame_id = LaunchConfiguration('frame_id', default='laser')
+    frame_id = LaunchConfiguration('frame_id', default='laser') 
     inverted = LaunchConfiguration('inverted', default='false')
     angle_compensate = LaunchConfiguration('angle_compensate', default='true')
-    lower_angle = LaunchConfiguration('lower_angle', default='2.443') # pi - rad_wanted
-    upper_angle = LaunchConfiguration('upper_angle', default='-2.443') # -pi + rad_wanted
+    lower_angle = LaunchConfiguration('lower_angle', default='-3.14') # pi - rad_wanted
+    upper_angle = LaunchConfiguration('upper_angle', default='3.14') # -pi + rad_wanted
 
     rviz_config_dir = os.path.join(
             get_package_share_directory('rplidar_ros'),
