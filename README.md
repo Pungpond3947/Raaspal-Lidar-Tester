@@ -8,24 +8,6 @@ Workspace นี้เป็น ROS 2 workspace สำหรับทดสอ�
 - RPLIDAR A2M7
 - PACECAT LDS-50C-C20E
 
-## โครงสร้างหลัก
-
-```text
-src/
-  rplidar_ros/
-    launch/
-      custom_s1_launch.py
-      custom_a2m7_launch.py
-  lidar_tester/
-    launch/
-      lidar_tester_s1_launch.py
-      lidar_tester_a2m7_launch.py
-    scripts/
-      lidar_s1_range_tester.py
-      lidar_a2m7_range_tester.py
-  laser_filters/
-```
-
 ## ใช้ ROS 2 Humble บน Ubuntu
 
 ตัวอย่างนี้ใช้ ROS 2 Humble บน Ubuntu
