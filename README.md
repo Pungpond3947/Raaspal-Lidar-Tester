@@ -2,10 +2,11 @@
 
 Workspace นี้เป็น ROS 2 workspace สำหรับทดสอบ RPLIDAR ผ่าน `rplidar_ros`, ใช้ `laser_filters` ทำ angle/range filter และมี `lidar_tester` สำหรับ log ค่าระยะจาก topic `/scan`.
 
-ตอนนี้ตั้งใจให้ใช้งานหลัก 2 รุ่น:
+ตอนนี้ใช้งานหลัก 3 รุ่น:
 
 - RPLIDAR S1
 - RPLIDAR A2M7
+- PACECAT LDS-50C-C20E
 
 ## โครงสร้างหลัก
 
@@ -25,34 +26,15 @@ src/
   laser_filters/
 ```
 
-## สิ่งที่ต้องมีก่อนใช้งาน
+## ใช้ ROS 2 Humble บน Ubuntu
 
 ตัวอย่างนี้ใช้ ROS 2 Humble บน Ubuntu
-
-```bash
-sudo apt update
-sudo apt install -y python3-colcon-common-extensions python3-rosdep
-```
-
-ถ้ายังไม่เคย setup `rosdep` ในเครื่อง:
-
-```bash
-sudo rosdep init
-rosdep update
-```
 
 ## Clone workspace
 
 ```bash
 git clone https://github.com/Pungpond3947/Raaspal-Lidar-Tester.git Raaspal_Lidar_tester
 cd Raaspal_Lidar_tester
-```
-
-## Install dependencies
-
-```bash
-source /opt/ros/humble/setup.bash
-rosdep install --from-paths src --ignore-src -r -y
 ```
 
 ## Build
@@ -146,20 +128,6 @@ ros2 launch lidar_tester lidar_tester_a2m7_launch.py
 
 ```bash
 ros2 launch lidar_tester lidar_tester_a2m7_launch.py serial_port:=/dev/ttyUSB1
-```
-
-## Launch เฉพาะ RPLIDAR
-
-ถ้าต้องการเปิดเฉพาะ rplidar + filter + RViz โดยไม่เปิด tester:
-
-```bash
-ros2 launch rplidar_ros custom_s1_launch.py
-```
-
-หรือ:
-
-```bash
-ros2 launch rplidar_ros custom_a2m7_launch.py
 ```
 
 ## Topic ที่ใช้
