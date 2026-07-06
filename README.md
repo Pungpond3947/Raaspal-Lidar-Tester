@@ -44,8 +44,8 @@ rosdep update
 ## Clone workspace
 
 ```bash
-git clone https://github.com/Pungpond3947/Raaspal-Lidar-Tester.git Raaspal_Lidar_test
-cd Raaspal_Lidar_test
+git clone https://github.com/Pungpond3947/Raaspal-Lidar-Tester.git Raaspal_Lidar_tester
+cd Raaspal_Lidar_tester
 ```
 
 ## Install dependencies
